@@ -1,5 +1,7 @@
 <template>
   <div class="about">
-    <h1>Sorry, Website under construction!!</h1>
+    <v-row justify="center">
+      <h1>Sorry, Website under construction!!</h1>
+    </v-row>
   </div>
 </template>

@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/img/underconstruction.jpg">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <v-row justify="center">
+      <v-img :src="underConstruction" max-width="700"></v-img>
+    </v-row>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'HomeView',
-  components: {
-    // HelloWorld
-  }
-}
+  name: "Home",
+  data: () => ({
+    underConstruction: require("@/assets/img/underconstruction.jpg"),
+  }),
+  components: {},
+};
 </script>

@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
+  <v-app>
+    <v-nav class="text-center my-5">
+      <router-link to="/">Home</router-link> | 
       <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+    </v-nav>
+    <v-main>
+      <router-view />
+    </v-main>
+    <v-footer app color="light-blue lighten-3">
+      <v-col class="text-center" cols="12">
+        {{ new Date().getFullYear() }} — <v-icon>mdi-instagram</v-icon
+        ><strong
+          ><a href="https://www.instagram.com/irsanramadhan13/" target="_blank"
+            >irsanramadhan13</a
+          ></strong
+        >
+
+        <span class="footer-content float-right"
+          >v {{ version.slice(1, -1) }}</span
+        >
+      </v-col>
+    </v-footer>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: "App",
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+  data: () => ({
+    version: JSON.stringify(require("@/../package.json").version),
+  }),
+};
+</script>
