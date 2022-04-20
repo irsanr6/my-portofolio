@@ -1,15 +1,15 @@
 <template>
-  <hello-world />
+  <sidebar></sidebar>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import Sidebar from "@/components/dashboard/Sidebar.vue";
 
-  export default {
-    name: 'Home',
+export default {
+  name: "Home",
 
-    components: {
-      HelloWorld,
-    },
-  }
+  components: {
+    Sidebar,
+  },
+};
 </script>
